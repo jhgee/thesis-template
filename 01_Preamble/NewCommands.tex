@@ -1,0 +1,27 @@
+%%% File encoding is UTF-8
+
+\newcommand*{\name}[1]{\textsc{#1}}
+\newcommand*{\abb}[1]{\gls{abb}~#1}
+\newcommand*{\refsec}[1]{\gls{abs}~#1}
+
+% Gl. vor Gleichungsnummer
+\let\originaleqref\eqref
+\newcommand{\Eqref}[1]{(\gls{gl}~\ref{#1})}
+
+% Wrapfigure which sizes automatically to inserted figure size
+\newsavebox\mybox
+%Syntax:
+%\begin{Wrapfigure}[<lines>]{<position>}[<overhang>]{<image file>}[<options for image>]
+%\caption{description}
+%\label{...}
+%\end{Wrapfigure}
+
+\NewDocumentEnvironment{Wrapfigure}{O{} m O{0pt} m O{}}
+  {%
+    \savebox\mybox{\includegraphics[#5]{#4}}
+%     \wrapfigure[#1]{#2}[#3]{\wd\mybox}
+    \wrapfigure[#1]{#2}{\wd\mybox}
+    \vspace{#3}
+    \usebox\mybox
+  }
+  {\endwrapfigure}

@@ -1,0 +1,39 @@
+
+\usepackage[backend=biber, style=nature, sorting=none
+,firstinits=true
+,maxbibnames=8
+% ,backref=true
+]{biblatex}
+\DefineBibliographyStrings{german}{%
+  andothers = {et\addabbrvspace al\adddot}
+}
+\bibliography{05_Bibliography/Thesis.bib}
+% Nachname, Vorname
+\DeclareNameAlias{sortname}{last-first}
+\DeclareNameAlias{default}{last-first}
+
+\AtEveryBibitem{% Clean up the bibtex rather than editing it
+ \clearlist{address}
+ \clearfield{date}
+ \clearfield{eprint}
+ \clearfield{isbn}
+ \clearfield{issn}
+ \clearlist{location}
+ \clearfield{month}
+ \clearfield{series}
+ \clearfield{file}
+ \clearfield{doi}
+ \ifentrytype{misc}{}{% Remove url except for misc (webpages)
+  \clearfield{url}
+  }
+
+ \ifentrytype{book}{}{% Remove publisher and editor except for books
+  \clearlist{publisher}
+  \clearname{editor}
+ }
+}
+% prints author names as small caps
+% \renewcommand{\mkbibnamefirst}[1]{\textsc{#1}}
+\renewcommand{\mkbibnamelast}[1]{\textsc{#1}}
+\renewcommand{\mkbibnameprefix}[1]{\textsc{#1}}
+\renewcommand{\mkbibnameaffix}[1]{\textsc{#1}}

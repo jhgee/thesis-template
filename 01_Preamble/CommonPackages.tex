@@ -1,0 +1,67 @@
+%%% File encoding is UTF-8
+
+% CTAN: http://www.ctan.org/pkg/inputenc
+%
+
+% CTAN: http://www.ctan.org/pkg/inputenx
+\usepackage[utf8]{inputenc}
+
+% Language support for 'english' (alternative 'ngerman' or 'french' for example)
+% CTAN: http://www.ctan.org/pkg/babel
+\usepackage[ngerman,british]{babel}
+
+% Font Encoding is 'T1' -- important for special characters such as Umlaute ü or ä and special characters like ñ (enje)
+% CTAN: http://www.ctan.org/pkg/fontenc
+\usepackage{lmodern}	% further developed than computer modern
+\usepackage[T1]{fontenc}
+\usepackage[final]{microtype}
+
+% Doing calculations with LaTeX units -- needed for the vertical line in the footer
+% CTAN: http://www.ctan.org/pkg/calc
+\usepackage{calc}
+
+% Extended graphics support
+% There is also a package named 'graphics' - watch out!
+% CTAN: http://www.ctan.org/pkg/graphicx
+\usepackage{graphicx}
+
+% Extendes support for floating objects (tables, figures), adds the [H] placing option (\begin{figure}[H]) which palces it "Here" (without any doubt).
+% CTAN: http://www.ctan.org/pkg/float
+\usepackage{float}
+
+% Extended color support
+% I use the command \definecolor for example.
+% Option 'Table': Load the colortbl package, in order to use the tools for coloring rows, columns, and cells within tables.
+% CTAN: http://www.ctan.org/pkg/xcolor
+\usepackage[cmyk]{xcolor}
+
+% Nice tables
+% CTAN: http://www.ctan.org/pkg/booktabs
+\usepackage{booktabs}
+
+% Better support for ragged left and right. Provides the commands \RaggedRight and \RaggedLeft.
+% Standard LaTeX commands are \raggedright and \raggedleft
+% http://www.ctan.org/pkg/ragged2e
+% \usepackage{ragged2e}
+
+% Create function plots directly in LaTeX
+% CTAN: http://www.ctan.org/pkg/pgfplots
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.11}
+
+% More math options
+\usepackage{amsmath}
+
+% Units and numbers
+\usepackage[locale=DE,
+range-phrase={~bis~},
+list-final-separator={~und~},
+exponent-product = \cdot,
+detect-all]{siunitx} %output-decimal-marker = {,}, %per-mode=fraction,
+\usepackage{textcomp}
+
+\usepackage{wrapfig}
+
+\usepackage{xparse} % declaring new document commands such as a new environment
+\usepackage{epstopdf}
+\usepackage{placeins} % FloatBarrier

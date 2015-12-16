@@ -1,0 +1,23 @@
+%%% File encoding is UTF-8
+
+\usepackage[acronym,  section, nonumberlist, nopostdot]{glossaries}
+%extra Glossar für Akronyme, keine neue Seite zwischen Glossaren, keine Seitenzahlen, kein Punkt
+
+% abbreviations:
+\newacronym{abb}{Abb.}{Abbildung}
+\newacronym{abs}{Abs.}{Abschnitt}
+\newacronym{gl}{Gl.}{Gleichung}
+\newacronym{gau}{GAU}{Georg-August-Universität}
+
+% nomenclature:
+\newglossaryentry{distance}{
+name = \ensuremath{d},
+description = Die Distanz
+}
+
+\newglossaryentry{angle}{
+name = \ensuremath{\alpha},
+sort = a,
+description = Der Winkel
+}
+\makeglossaries

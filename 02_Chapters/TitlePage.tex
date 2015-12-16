@@ -1,0 +1,69 @@
+%%% File encoding is UTF-8
+
+% Title page using \maketitle (a more flexible alternative is the titlepage environment)
+
+% \title{Bachelorarbeit}
+% \subtitle{Heiße Ladungsträger in Graphen \\ Hot carrier photoluminescence from graphene}
+% \author{John Henri Gaida aus Lübeck}
+% \date{01.01.2015}
+% \maketitle
+
+\begin{titlepage}
+  \begin{center}
+    % save image to a savbox to insert a second image with exact same height
+    \newsavebox\titlebox
+    \savebox\titlebox{\includegraphics[width = 0.55\linewidth]{03_GraphicFiles/01UniTitel}}
+    % header
+    \usebox\titlebox
+    \hfill
+    \includegraphics[height = \ht\titlebox]{03_GraphicFiles/03PhysikLogo}
+
+    \vfill
+    \Huge
+    {Der freie Fall}
+
+    \vspace{0.5cm}
+    \Large
+    The free fall
+
+    %\vspace{1.5cm}
+    \vfill
+    \Huge
+    Bachelorarbeit
+
+    \Large
+    vorgelegt von
+
+    \Huge
+    {Max Mustermann}
+
+    \Large
+    aus Musterstadt
+
+    %\vspace{1.5cm}
+    \vfill
+
+    \large
+    angefertigt im
+
+    \Large
+    Spaß Institut\\
+    \large in der Arbeitsgruppe für \\
+    \Large
+    Witz und Komik
+    \vfill
+    %   \large
+    %   der Georg-August-Universität Göttingen
+    % %   \includegraphics[width = \linewidth]{03_GraphicFiles/UniTitel}
+    %
+    %  \includegraphics[scale=0.5]{03_GraphicFiles/UniLogo}
+    \large
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} l r}
+      Betreuer: & Prof. Dr. Witz \\
+      Korreferent: & Prof. Dr. Kowitz\\
+      Tag der Einreichung: & 11. November 2011
+    \end{tabular*}
+
+  \end{center}
+
+\end{titlepage}
